@@ -11,7 +11,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
     body
         aside
-            .info
+            .info(class="d-none d-lg-block")
                 p abdelrahman fawzy
                 span MERN Stack Developer
             hr
@@ -48,5 +48,19 @@ html(lang="en")
                     a(href="#") 
                         i(class="fas fa-file" style="color:#424242")
                         | resume
+        .content-area
+            .intro
+                //- (class="d-block d-lg-none")
+                .mdinfo(class="d-block d-lg-none")
+                    i(class="fas fa-toggle-off toggle")
+                    p abdelrahman fawzy
+                    span MERN Stack Developer
+                .overlay 
+                    .container 
+                        h1 i want to 
+                            span make things
+                            br 
+                            |that make a difference
         script(src="js/jquery-3.5.1.min.js")
         script(src="js/bootstrap.min.js")
+        script(src="js/main.js") 
