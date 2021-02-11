@@ -17,11 +17,11 @@ html(lang="en")
             hr
             ul.list-unstyled
                 li(style="border-left-color:#008073;")
-                    a(href="#") 
+                    a(href="#" class='about') 
                         i(class="fas fa-user" style="color:#008073;")
                         | about 
                 li(style="border-left-color:#00BCD4;")
-                    a(href="#") 
+                    a(href="#" class="experience") 
                         i(class="fas fa-chart-line" style="color:#00BCD4")
                         | experience
                 li(style="border-left-color:#3F51B5;")
@@ -61,6 +61,39 @@ html(lang="en")
                             span make things
                             br 
                             |that make a difference
+            .about-us
+                .section-header about
+                blockquote 
+                    h2 Mission-driven full stack developer with a passion for thoughtful UI design, collaboration, and teaching.
+                p I’ve always sought out opportunities and challenges that are meaningful to me. Although my professional path has taken many twists and turns — from touring and recording artist, to employee of the year at a non-profit, to dean's scholar at UPenn, to small business owner and entrepreneur — I've never stopped engaging my passion to help others and solve problems.
+                p As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact at a high growth company.
+            .experiences
+                .section-header experiences
+                .container
+                    .card
+                        .card-header
+                            .row
+                                .col-sm-2.image
+                                    img(src="images/SPE SU SC.png", alt="spe logo", class="responsive-img center-block")
+                                .col-sm-4 
+                                    a(href="#" class="link") SPE
+                                .col-sm-6(class="d-none d-lg-block d-md-block title") IT Committe head
+                        .card-body
+                            p.title SaaS platform that enables enterprise companies to build, run, and measure their positive impact campaigns.
+                            h6 develop product
+                            ul
+                                li Contribute core features across entire stack (20k+ lines of code, 250+ pulls)
+                                li Lead front-end development, creating and documenting app-wide design system
+                                li Oversee transition from page-based styles to modular component styles
+                                li Guide best practices around accessible, semantic UI/UX
+                                li Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery // Sass // HTML, JSX, Haml
+                            h6 accomplishments
+                            ul
+                                li Dramatically increased speed of UI development using atomic, scalable CSS
+                                li Built tool to convert HRIS data into user accounts to simplify onboarding
+                                li Implemented inline @tagging feature to increase app share-ability
+                        .card-footer.text-muted
+                            | Jan 2016 - Present | Boston, MA
         script(src="js/jquery-3.5.1.min.js")
         script(src="js/bootstrap.min.js")
         script(src="js/main.js") 
