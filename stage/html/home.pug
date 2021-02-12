@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(content='width=device-width, initial-scale=1' name='viewport')
         title Abdelrahman Fawzy Portfolio
         link(rel="stylesheet", href="css/bootstrap.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap")
@@ -14,7 +15,7 @@ html(lang="en")
             .info(class="d-none d-lg-block")
                 p abdelrahman fawzy
                 span MERN Stack Developer
-            hr
+            hr(class="d-none d-lg-block")
             ul.list-unstyled
                 li(style="border-left-color:#008073;")
                     a(href="#" class='about') 
@@ -25,7 +26,7 @@ html(lang="en")
                         i(class="fas fa-chart-line" style="color:#00BCD4")
                         | experience
                 li(style="border-left-color:#3F51B5;")
-                    a(href="#") 
+                    a(href="#" class="project") 
                         i(class="fas fa-tasks" style="color:#3F51B5")
                         | projects
                 li(style="border-left-color:#9C27B0;")
@@ -69,31 +70,246 @@ html(lang="en")
                 p As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact at a high growth company.
             .experiences
                 .section-header experiences
-                .container
+                .container.experience-container
                     .card
                         .card-header
                             .row
-                                .col-sm-2.image
+                                .col-lg-2.col-6.image
                                     img(src="images/SPE SU SC.png", alt="spe logo", class="responsive-img center-block")
-                                .col-sm-4 
+                                .col-lg-4.col-6.text-center
                                     a(href="#" class="link") SPE
-                                .col-sm-6(class="d-none d-lg-block d-md-block title") IT Committe head
+                                .col-lg-6(class="d-none d-lg-block title") IT Committe head
                         .card-body
-                            p.title SaaS platform that enables enterprise companies to build, run, and measure their positive impact campaigns.
+                            h3(class="position-title d-block d-lg-none") IT Committe head
+                            p The establishment of the Information Technology Department and the creation of the chapter's website, so that members can follow up everything new and know the history of the chapter
                             h6 develop product
                             ul
-                                li Contribute core features across entire stack (20k+ lines of code, 250+ pulls)
-                                li Lead front-end development, creating and documenting app-wide design system
-                                li Oversee transition from page-based styles to modular component styles
-                                li Guide best practices around accessible, semantic UI/UX
-                                li Tools: Ruby, Rails, PostgreSQL // React, JS, jQuery // Sass // HTML, JSX, Haml
-                            h6 accomplishments
-                            ul
-                                li Dramatically increased speed of UI development using atomic, scalable CSS
-                                li Built tool to convert HRIS data into user accounts to simplify onboarding
-                                li Implemented inline @tagging feature to increase app share-ability
+                                li creating the first website for SPE Suez
+                                li creating IT committee
+                                li Developing the level of committee members
                         .card-footer.text-muted
-                            | Jan 2016 - Present | Boston, MA
+                            | Jul 2018 – Jul 2019
+                    .card
+                        .card-header
+                            .row
+                                .col-lg-2.col-6.image
+                                    img(src="images/SPE SU SC.png", alt="spe logo", class="responsive-img center-block")
+                                .col-lg-4.col-6.text-center
+                                    a(href="#" class="link") SPE
+                                .col-lg-6(class="d-none d-lg-block title") Technical Trainer
+                        .card-body
+                            h3(class="position-title d-block d-lg-none") Technical Trainer
+                            p training my team in front end web development
+                            h6 accomplishments
+                            p my team was divided into 3 parts : beginner, intermediate and advanced
+                            ul
+                                li beginner team was trained from the scratch with HTML, CSS
+                                li intermediate team was trained on javaScript programming language
+                                li advanced team was trained on template engine and pre processors
+                        .card-footer.text-muted
+                            | Aug 2019 – May 2020
+                    .card
+                        .card-header
+                            .row
+                                .col-lg-2.col-6.image
+                                    img(src="images/aapg.png", alt="spe logo", class="responsive-img center-block")
+                                .col-lg-4.col-6.text-center
+                                    a(href="#" class="link") AAPG 
+                                .col-lg-6(class="d-none d-lg-block title") IT Member 
+                        .card-body
+                            h3(class="position-title d-block d-lg-none") IT Member
+                            p here i was it member, my role was receiving task and create it
+                        .card-footer.text-muted
+                            | Feb 2017 - May 2018
+            .projects
+                .section-header projects
+                .container
+                    .row
+                        .col-lg-4.col-md-6.col-12
+                            .card
+                                .card-image(data-value="axit")
+                                    img.card-img-top(class="img-fluid" src='images/axit.PNG' alt='axitSite')
+                                .card-body
+                                    h5.card-title(data-value="axit") axit
+                                        i.fas.fa-ellipsis-v
+                                    p.card-text
+                                    | PSD to HTML to training in bootstrap v3
+                                    .card-info.card-info-axit
+                                        h3 accomplishments
+                                            i.fas.fa-times
+                                        ul
+                                            li Bootstrap 3 in responsive design
+                                            li jQuery in plugins
+                                            li css for design
+                                        .views
+                                            a(href='https://axitdesignbootstrap.netlify.app/' target="_blank")
+                                                i.fas.fa-external-link-alt
+                                            a(href="#")
+                                                i.fab.fa-github
+                        .col-lg-4.col-md-6.col-12
+                            .card(style='')
+                                .card-image(data-value="elite")
+                                    img.card-img-top(src='images/elite.PNG' alt='eliteSite')
+                                .card-body
+                                    h5.card-title(data-value="elite") elite corp
+                                        i.fas.fa-ellipsis-v
+                                    p.card-text
+                                    | PSD to HTML to training in bootstrap v4
+                                    .card-info.card-info-elite
+                                        h3 accomplishments
+                                            i.fas.fa-times
+                                        ul
+                                            li Bootstrap 4 in responsive design
+                                            li jQuery in plugins
+                                            li sass for design
+                                            li pug js for structure
+                                        .views
+                                            a(href='https://elitecorpbootstrap.netlify.app/' target="_blank")
+                                                i.fas.fa-external-link-alt
+                                            a(href="#")
+                                                i.fab.fa-github 
+                        .col-lg-4.col-md-6.col-12
+                            .card(style='')
+                                .card-image(data-value="tantos")
+                                    img.card-img-top(src='images/tantos.PNG' alt='tantosSite')
+                                .card-body
+                                    h5.card-title(data-value="tantos") tantos studio
+                                        i.fas.fa-ellipsis-v
+                                    p.card-text
+                                    | PSD to HTML to training in jquery and java script
+                                    .card-info.card-info-tantos
+                                        h3 accomplishments
+                                            i.fas.fa-times
+                                        ul
+                                            li HTML for structure
+                                            li css for design
+                                            li jQuery in plugins
+                                        .views
+                                            a(href='https://tanatosstudiotemplate.netlify.app/' target="_blank")
+                                                i.fas.fa-external-link-alt
+                                            a(href="#")
+                                                i.fab.fa-github
+                        .col-lg-4.col-md-6.col-12
+                            .card(style='')
+                                .card-image(data-value="restaurant")
+                                    img.card-img-top(src='images/restaurant.PNG' alt='restaurantApp')
+                                .card-body
+                                    h5.card-title(data-value="restaurant") restaurant
+                                        i.fas.fa-ellipsis-v
+                                    p.card-text
+                                    | training on react
+                                    .card-info.card-info-restaurant
+                                        h3 accomplishments
+                                            i.fas.fa-times
+                                        ul
+                                            li JSX in Structure
+                                            li React as a framework
+                                            li reactstrap in responsive
+                                        .views
+                                            a(href='https://restaurant-react-application.netlify.app' target="_blank")
+                                                i.fas.fa-external-link-alt
+                                            a(href="#")
+                                                i.fab.fa-github
+            .skills
+                .section-header skills 
+                .container
+                    .card
+                        .card-body
+                            h2.card-title HTML
+                            .row.text-center
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/html5.png')
+                                    | HTML5
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/react.png')
+                                    | JSX
+                                //- .col.s4.m2
+                                //-     img.responsive-img(alt='' src='images/pug.png')
+                                //-     | Pug
+                    .card
+                        .card-body
+                            h2.card-title HTML
+                            .row.text-center
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/html5.png')
+                                    | HTML5
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/react.png')
+                                    | JSX
+                                //- .col.s4.m2
+                                //-     img.responsive-img(alt='' src='images/pug.png')
+                                //-     | Pug
+                    .card
+                        .card-body
+                            h2.card-title HTML
+                            .row.text-center
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/html5.png')
+                                    | HTML5
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/react.png')
+                                    | JSX
+                                //- .col.s4.m2
+                                //-     img.responsive-img(alt='' src='images/pug.png')
+                                //-     | Pug
+                    .card
+                        .card-body
+                            h2.card-title HTML
+                            .row.text-center
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/html5.png')
+                                    | HTML5
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/react.png')
+                                    | JSX
+                                //- .col.s4.m2
+                                //-     img.responsive-img(alt='' src='images/pug.png')
+                                //-     | Pug
+                    .card
+                        .card-body
+                            h2.card-title HTML
+                            .row.text-center
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/html5.png')
+                                    | HTML5
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/react.png')
+                                    | JSX
+                                //- .col.s4.m2
+                                //-     img.responsive-img(alt='' src='images/pug.png')
+                                //-     | Pug
+            .awards
+                .section-header awards
+                .container
+                    .row
+                        .col-sm-6
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
+                        .col-sm-6
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
+            .educations
+                .section-header education
+                .container
+                    .row
+                        .col-sm-6
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
+                        .col-sm-6
+                            .card
+                                .card-body
+                                    h5.card-title Special title treatment
+                                    p.card-text With supporting text below as a natural lead-in to additional content.
+                                    a.btn.btn-primary(href='#') Go somewhere
         script(src="js/jquery-3.5.1.min.js")
         script(src="js/bootstrap.min.js")
         script(src="js/main.js") 

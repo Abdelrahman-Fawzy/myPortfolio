@@ -1,6 +1,5 @@
 body {
     box-sizing: border-box;
-    height: 5000px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -13,12 +12,23 @@ body {
     text-transform: uppercase;
 }
 
+.clearfix {
+    clear: both;
+}
+
 aside {
     position: fixed;
     height: 100%;
     width: 250px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 1px 2px 10px #b4b2b2;
+    box-shadow: 1px 2px 5px #b4b2b2;
+    background-color: #fff;
+    z-index: 3;
+    .fa-times {
+        float: right;
+        padding: 10px;
+        cursor: pointer;
+    }
     .info {
         text-align: center;
         padding: 35px 10px;
@@ -62,16 +72,13 @@ aside {
     }
 }
 
-.noSideBar {
-    left: -250px;
+.showSideBar {
+    left: 0px;
 }
 .content-area {
-    width: calc(100% - 250px);
     float: right;
+    width: 100%;
     transition: all 0.3s ease-in-out;
-    &.noSideBar{
-        width: 100%;
-    }
     .intro {
         background-image: url('../images/IMG-20200308-WA0012.jpg');
         background-size: cover;
@@ -79,11 +86,12 @@ aside {
         .mdinfo {
             background-color: white;
             z-index: 2;
-            position: relative;
+            position: fixed;
             padding: 8px 10px;
             text-align: center;
+            width: 100%;
             .toggle {
-                float: left;
+                float: right;
                 font-size: 28px;
                 line-height: 31px;
                 cursor: pointer;
@@ -126,9 +134,11 @@ aside {
             margin: 32px 40px;
             color: #795548;
             font-weight: 400;
-            font-size: 32px;
             padding: 20px;
             border-left: 5px solid #795548;
+            h2 {
+                font-size: 32px;
+            }
         }
         p {
             font-size: 25px;
@@ -137,46 +147,134 @@ aside {
             margin: 32px 40px;
         }
     }
-    .card {
-        width: 80%;
-        margin: 60px auto;
-        .card-header {
-            padding: 0 30px;
-            .image {
-                max-width: 140px;
-                max-height: 100px;
-                img {
-                    width: 100%;
-                    height: 100%;
+    .experiences {
+        background-color: #EEE;
+        padding-bottom: 60px;
+        .card {
+                width: 100%;
+                margin: 40px auto 0;
+                box-shadow: -3px 4px 5px #d5d5d5;
+            .card-header {
+                padding: 0 30px;
+                background-color: #FFF;
+                .image {
+                    max-width: 140px;
+                    max-height: 100px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .link {
+                    font-size: 24px;
+                    line-height: 100px;
+                    color: #008073;
                 }
             }
-            .link {
-                font-size: 24px;
-                line-height: 100px;
-                color: #008073;
-            }
-            .title {
+            .title, .position-title {
                 font-size: 19px;
                 line-height: 100px;
                 color: #795548;
                 font-weight: 600;
+                text-align: right;
+            }
+            .position-title {
+                line-height: 20px;
+                text-align: left;
+            }
+            .card-body {
+                p {
+                    font-size: 17px;
+                    color: #666;
+                    font-style: italic;
+                }
+                h6 {
+                    color: #333;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    margin-top: 20px;
+                }
+                ul {
+                    padding: 0 0 0 30px;
+                    line-height: 35px;
+                }
             }
         }
-        .card-body {
-            p {
-                font-size: 17px;
-                color: #666;
-                font-style: italic;
-            }
-            h6 {
-                color: #333;
-                text-transform: uppercase;
-                margin-bottom: 15px;
+    }
+    .projects {
+        .row {
+            padding: 30px;
+            .card {
+                height: 370px;
                 margin-top: 20px;
-            }
-            ul {
-                padding: 0 0 0 30px;
-                line-height: 35px;
+                margin-bottom: 20px;
+                position: relative;
+                box-shadow: -4px 5px 7px #efefef;
+                .card-image {
+                    height: 230px;
+                    cursor: pointer;
+                    img {
+                        height: 100%;
+                    }
+                }
+                .card-title {
+                    color: #008073;
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    cursor: pointer;
+                    .fa-ellipsis-v {
+                        float: right;
+                        cursor:pointer;
+                        font-size: 16px;
+                        line-height: 27px
+                    }
+                }
+                .card-info {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #FFF;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                    h3 {
+                        padding: 25px;
+                        font-size: 24px;
+                        text-transform: capitalize;
+                        color: #795548;
+                        i {
+                            float: right;
+                            cursor: pointer;
+                        }
+                    }
+                    ul {
+                        li {
+                            text-transform: capitalize;
+                            font-size: 18px;
+                            line-height: 35px;
+                            color: #333;
+                        }
+                    }
+                    .views {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 10px;
+                        a {
+                            font-size: 23px;
+                            background-color: #8a5a48;
+                            color: #fff;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            width: 50px;
+                            height: 50px;
+                            display: inline-block;
+                            text-align: center;
+                            line-height: 50px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -190,6 +288,17 @@ aside {
             font-size: 30px !important;
         }
     }
+    .about-us {
+        blockquote {
+            h2 {
+                font-size: 23px !important;
+            }
+        }
+        p {
+            font-size: 20px !important;
+            line-height: 35px !important;
+        }
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -197,6 +306,11 @@ aside {
         h1 {
             margin-top: 67px;
             font-size: 40px !important;
+        }
+    }
+    .experiences {
+        .experience-container {
+            max-width: 700px;
         }
     }
 }
@@ -209,10 +323,20 @@ aside {
             font-size: 40px !important;
         }
     }
+    .experiences {
+        .experience-container {
+            max-width: 800px;
+        }
+    }
+    .projects {
+        .container {
+            max-width: 900px;
+        }
+    }
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199) {
+// medium devices (992px)
+@media (min-width: 992px) and (max-width: 1199px) {
     .intro {
         h1 {
             margin-top: 0;
@@ -221,7 +345,26 @@ aside {
     }
 }
 
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .content-area {
+        width: calc(100% - 250px);
+        .experiences {
+            .card {
+                width: 80%;
+                margin: 60px auto 0;
+            }
+        }
+    }
+}
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    
+
+}
+
+//all devices without large screen
+@media (min-width: 0px) and (max-width : 991px) {
+    aside {
+        left: -250px;
+    }
 }

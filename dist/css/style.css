@@ -1,6 +1,5 @@
 body {
   box-sizing: border-box;
-  height: 5000px;
   font-family: 'Roboto', sans-serif; }
 
 .section-header {
@@ -11,12 +10,21 @@ body {
   font-weight: normal;
   text-transform: uppercase; }
 
+.clearfix {
+  clear: both; }
+
 aside {
   position: fixed;
   height: 100%;
   width: 250px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 1px 2px 10px #b4b2b2; }
+  box-shadow: 1px 2px 5px #b4b2b2;
+  background-color: #fff;
+  z-index: 3; }
+  aside .fa-times {
+    float: right;
+    padding: 10px;
+    cursor: pointer; }
   aside .info {
     text-align: center;
     padding: 35px 10px; }
@@ -49,15 +57,13 @@ aside {
         aside .list-unstyled li a i {
           margin-right: 5px; }
 
-.noSideBar {
-  left: -250px; }
+.showSideBar {
+  left: 0px; }
 
 .content-area {
-  width: calc(100% - 250px);
   float: right;
+  width: 100%;
   transition: all 0.3s ease-in-out; }
-  .content-area.noSideBar {
-    width: 100%; }
   .content-area .intro {
     background-image: url("../images/IMG-20200308-WA0012.jpg");
     background-size: cover;
@@ -65,11 +71,12 @@ aside {
     .content-area .intro .mdinfo {
       background-color: white;
       z-index: 2;
-      position: relative;
+      position: fixed;
       padding: 8px 10px;
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
       .content-area .intro .mdinfo .toggle {
-        float: left;
+        float: right;
         font-size: 28px;
         line-height: 31px;
         cursor: pointer; }
@@ -103,66 +110,159 @@ aside {
     margin: 32px 40px;
     color: #795548;
     font-weight: 400;
-    font-size: 32px;
     padding: 20px;
     border-left: 5px solid #795548; }
+    .content-area .about-us blockquote h2 {
+      font-size: 32px; }
   .content-area .about-us p {
     font-size: 25px;
     line-height: 42px;
     color: #333;
     margin: 32px 40px; }
-  .content-area .card {
-    width: 80%;
-    margin: 60px auto; }
-    .content-area .card .card-header {
-      padding: 0 30px; }
-      .content-area .card .card-header .image {
-        max-width: 140px;
-        max-height: 100px; }
-        .content-area .card .card-header .image img {
-          width: 100%;
-          height: 100%; }
-      .content-area .card .card-header .link {
-        font-size: 24px;
-        line-height: 100px;
-        color: #008073; }
-      .content-area .card .card-header .title {
+  .content-area .experiences {
+    background-color: #EEE;
+    padding-bottom: 60px; }
+    .content-area .experiences .card {
+      width: 100%;
+      margin: 40px auto 0;
+      box-shadow: -3px 4px 5px #d5d5d5; }
+      .content-area .experiences .card .card-header {
+        padding: 0 30px;
+        background-color: #FFF; }
+        .content-area .experiences .card .card-header .image {
+          max-width: 140px;
+          max-height: 100px; }
+          .content-area .experiences .card .card-header .image img {
+            width: 100%;
+            height: 100%; }
+        .content-area .experiences .card .card-header .link {
+          font-size: 24px;
+          line-height: 100px;
+          color: #008073; }
+      .content-area .experiences .card .title, .content-area .experiences .card .position-title {
         font-size: 19px;
         line-height: 100px;
         color: #795548;
-        font-weight: 600; }
-    .content-area .card .card-body p {
-      font-size: 17px;
-      color: #666;
-      font-style: italic; }
-    .content-area .card .card-body h6 {
-      color: #333;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      margin-top: 20px; }
-    .content-area .card .card-body ul {
-      padding: 0 0 0 30px;
-      line-height: 35px; }
+        font-weight: 600;
+        text-align: right; }
+      .content-area .experiences .card .position-title {
+        line-height: 20px;
+        text-align: left; }
+      .content-area .experiences .card .card-body p {
+        font-size: 17px;
+        color: #666;
+        font-style: italic; }
+      .content-area .experiences .card .card-body h6 {
+        color: #333;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: 20px; }
+      .content-area .experiences .card .card-body ul {
+        padding: 0 0 0 30px;
+        line-height: 35px; }
+  .content-area .projects .row {
+    padding: 30px; }
+    .content-area .projects .row .card {
+      height: 370px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: -4px 5px 7px #efefef; }
+      .content-area .projects .row .card .card-image {
+        height: 230px;
+        cursor: pointer; }
+        .content-area .projects .row .card .card-image img {
+          height: 100%; }
+      .content-area .projects .row .card .card-title {
+        color: #008073;
+        text-transform: uppercase;
+        font-size: 24px;
+        cursor: pointer; }
+        .content-area .projects .row .card .card-title .fa-ellipsis-v {
+          float: right;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 27px; }
+      .content-area .projects .row .card .card-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        width: 100%;
+        height: 100%;
+        display: none; }
+        .content-area .projects .row .card .card-info h3 {
+          padding: 25px;
+          font-size: 24px;
+          text-transform: capitalize;
+          color: #795548; }
+          .content-area .projects .row .card .card-info h3 i {
+            float: right;
+            cursor: pointer; }
+        .content-area .projects .row .card .card-info ul li {
+          text-transform: capitalize;
+          font-size: 18px;
+          line-height: 35px;
+          color: #333; }
+        .content-area .projects .row .card .card-info .views {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 10px; }
+          .content-area .projects .row .card .card-info .views a {
+            font-size: 23px;
+            background-color: #8a5a48;
+            color: #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px; }
 
 /* media query */
 @media (max-width: 575px) {
   .intro h1 {
     margin-top: 67px;
-    font-size: 30px !important; } }
+    font-size: 30px !important; }
+  .about-us blockquote h2 {
+    font-size: 23px !important; }
+  .about-us p {
+    font-size: 20px !important;
+    line-height: 35px !important; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .intro h1 {
     margin-top: 67px;
-    font-size: 40px !important; } }
+    font-size: 40px !important; }
+  .experiences .experience-container {
+    max-width: 700px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .intro h1 {
     margin-top: 67px;
-    font-size: 40px !important; } }
+    font-size: 40px !important; }
+  .experiences .experience-container {
+    max-width: 800px; }
+  .projects .container {
+    max-width: 900px; } }
 
-@media (min-width: 992px) and (max-width: 1199) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .intro h1 {
     margin-top: 0;
     font-size: 53px; } }
+
+@media (min-width: 992px) {
+  .content-area {
+    width: calc(100% - 250px); }
+    .content-area .experiences .card {
+      width: 80%;
+      margin: 60px auto 0; } }
+
+@media (min-width: 0px) and (max-width: 991px) {
+  aside {
+    left: -250px; } }
 
 /*# sourceMappingURL=style.css.map */
