@@ -16,6 +16,10 @@ body {
     clear: both;
 }
 
+.active {
+    font-weight: bold;
+}
+
 aside {
     position: fixed;
     height: 100%;
@@ -79,6 +83,7 @@ aside {
     float: right;
     width: 100%;
     transition: all 0.3s ease-in-out;
+    background-color: #FAFAFA;
     .intro {
         background-image: url('../images/IMG-20200308-WA0012.jpg');
         background-size: cover;
@@ -129,7 +134,7 @@ aside {
             }
         }
     }
-    .about-us {
+    .abouts {
         blockquote {
             margin: 32px 40px;
             color: #795548;
@@ -148,7 +153,6 @@ aside {
         }
     }
     .experiences {
-        background-color: #EEE;
         padding-bottom: 60px;
         .card {
                 width: 100%;
@@ -278,17 +282,116 @@ aside {
             }
         }
     }
+    .skills {
+        .card {
+            margin: 50px;
+            box-shadow: -4px 5px 7px #efefef;
+            .responsive-img {
+                margin: 0 auto;
+                max-height: 100px;
+                padding-bottom: 10px;
+                text-align: center;
+                vertical-align: middle;
+                display: table-cell;
+            }
+            .card-title {
+                font-size: 34px;
+                color: #795548;
+                border-bottom: 1px solid #d4d4d4;
+                padding: 20px 0;
+            }
+            .row {
+                padding: 20px 0;
+            }
+        }
+    }
+    .awards {
+        .card {
+            margin: 35px 10px;
+            .card-title {
+                font-size: 25px;
+                text-transform: uppercase;
+                color: #008073;
+            }
+            .card-text {
+                color: #795548;
+                text-transform: capitalize;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            ul {
+                padding-left: 20px;
+                li {
+                    text-transform: capitalize;
+                    color: #333;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .educations {
+        .card {
+            margin: 35px 10px;
+            .card-title {
+                font-size: 25px;
+                text-transform: uppercase;
+                color: #008073;
+            }
+            .card-text {
+                color: #795548;
+                text-transform: capitalize;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            ul {
+                padding-left: 20px;
+                li {
+                    text-transform: capitalize;
+                    color: #333;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .contacts {
+        p {
+            .icon {
+                font-size: 23px;
+                background-color: #8a5a48;
+                color: #fff;
+                border-radius: 50%;
+                margin-right: 10px;
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+    }
+    .toTop {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 15px;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: 1px solid #b7b5b5;
+        outline: none;
+        color: #888;
+        display: none;
+    }
 }
 
 /* media query */
 @media (max-width: 575px) {
     .intro {
         h1 {
-            margin-top: 67px;
+            margin-top: 150px;
             font-size: 30px !important;
         }
     }
-    .about-us {
+    .abouts {
         blockquote {
             h2 {
                 font-size: 23px !important;
@@ -297,6 +400,11 @@ aside {
         p {
             font-size: 20px !important;
             line-height: 35px !important;
+        }
+    }
+    .skills {
+        .card {
+            margin: 50px 10px !important;
         }
     }
 }
@@ -311,6 +419,52 @@ aside {
     .experiences {
         .experience-container {
             max-width: 700px;
+        }
+    }
+    .skills {
+        .container {
+            max-width: 720px;
+            .card {
+                margin: 50px 20px;
+            }
+        }
+    }
+    .awards {
+        .container {
+            max-width: 720px;
+            .card {
+                .card-title {
+                    font-size: 22px;
+                }
+                .card-text {
+                    font-size: 15px;
+                }
+                ul {
+                    li {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .educations {
+        .container {
+            max-width: 720px;
+            .card {
+                .card-title {
+                    font-size: 22px;
+                }
+                .card-text {
+                    font-size: 15px;
+                }
+                ul {
+                    li {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
         }
     }
 }
@@ -329,6 +483,21 @@ aside {
         }
     }
     .projects {
+        .container {
+            max-width: 900px;
+        }
+    }
+    .skills {
+        .container {
+            max-width: 900px;
+        }
+    }
+    .awards {
+        .container {
+            max-width: 900px;
+        }
+    }
+    .educations {
         .container {
             max-width: 900px;
         }

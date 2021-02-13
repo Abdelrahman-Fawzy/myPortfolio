@@ -18,31 +18,31 @@ html(lang="en")
             hr(class="d-none d-lg-block")
             ul.list-unstyled
                 li(style="border-left-color:#008073;")
-                    a(href="#" class='about') 
+                    a(href="#" class='abouts') 
                         i(class="fas fa-user" style="color:#008073;")
                         | about 
                 li(style="border-left-color:#00BCD4;")
-                    a(href="#" class="experience") 
+                    a(href="#" class="experiences") 
                         i(class="fas fa-chart-line" style="color:#00BCD4")
                         | experience
                 li(style="border-left-color:#3F51B5;")
-                    a(href="#" class="project") 
+                    a(href="#" class="projects") 
                         i(class="fas fa-tasks" style="color:#3F51B5")
                         | projects
                 li(style="border-left-color:#9C27B0;")
-                    a(href="#") 
+                    a(href="#" class='skills') 
                         i(class="fas fa-chart-bar" style="color:#9C27B0")
                         | skills
                 li(style="border-left-color:#F44336;")
-                    a(href="#") 
+                    a(href="#" class='awards') 
                         i(class="fas fa-award" style="color:#F44336")
                         | awards
                 li(style="border-left-color:#FF9800;")
-                    a(href="#") 
+                    a(href="#" class='educations') 
                         i(class="fas fa-graduation-cap" style="color:#FF9800")
                         | education
                 li(style="border-left-color:#795548;")
-                    a(href="#") 
+                    a(href="#" class='contacts') 
                         i(class="fas fa-envelope" style="color:#795548")
                         | contact
                 li(style="border-left-color:#424242;")
@@ -62,7 +62,7 @@ html(lang="en")
                             span make things
                             br 
                             |that make a difference
-            .about-us
+            .abouts
                 .section-header about
                 blockquote 
                     h2 Mission-driven full stack developer with a passion for thoughtful UI design, collaboration, and teaching.
@@ -223,58 +223,64 @@ html(lang="en")
                                 .col.s4.m2
                                     img.responsive-img(alt='' src='images/react.png')
                                     | JSX
-                                //- .col.s4.m2
-                                //-     img.responsive-img(alt='' src='images/pug.png')
-                                //-     | Pug
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/pug.png')
+                                    | Pug js
                     .card
                         .card-body
-                            h2.card-title HTML
+                            h2.card-title CSS
                             .row.text-center
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/html5.png')
-                                    | HTML5
+                                    img.responsive-img(alt='' src='images/css3.png')
+                                    | CSS3
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/react.png')
-                                    | JSX
-                                //- .col.s4.m2
-                                //-     img.responsive-img(alt='' src='images/pug.png')
-                                //-     | Pug
+                                    img.responsive-img(alt='' src='images/sass.png')
+                                    | SASS
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/bootstrap.png')
+                                    | Bootstrap
                     .card
                         .card-body
-                            h2.card-title HTML
+                            h2.card-title Java Script
                             .row.text-center
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/html5.png')
-                                    | HTML5
+                                    img.responsive-img(alt='' src='images/javascript.png')
+                                    | Java Script
                                 .col.s4.m2
                                     img.responsive-img(alt='' src='images/react.png')
-                                    | JSX
-                                //- .col.s4.m2
-                                //-     img.responsive-img(alt='' src='images/pug.png')
-                                //-     | Pug
+                                    | React js 
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/nodejs.png')
+                                    | Node js
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/jquery.png')
+                                    | jQuery
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/express.png')
+                                    | Express Js
                     .card
                         .card-body
-                            h2.card-title HTML
+                            h2.card-title Back End
                             .row.text-center
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/html5.png')
-                                    | HTML5
+                                    img.responsive-img(alt='' src='images/mongodb.png')
+                                    | Mongo DB
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/react.png')
-                                    | JSX
-                                //- .col.s4.m2
-                                //-     img.responsive-img(alt='' src='images/pug.png')
-                                //-     | Pug
+                                    img.responsive-img(alt='' src='images/sql.png')
+                                    | SQL Server
+                                .col.s4.m2
+                                    img.responsive-img(alt='' src='images/mySql.png')
+                                    | mySql
                     .card
                         .card-body
-                            h2.card-title HTML
+                            h2.card-title Others
                             .row.text-center
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/html5.png')
-                                    | HTML5
+                                    img.responsive-img(alt='' src='images/gulp.png')
+                                    | Gulp Js
                                 .col.s4.m2
-                                    img.responsive-img(alt='' src='images/react.png')
-                                    | JSX
+                                    img.responsive-img(alt='' src='images/github.png')
+                                    | Github
                                 //- .col.s4.m2
                                 //-     img.responsive-img(alt='' src='images/pug.png')
                                 //-     | Pug
@@ -285,15 +291,17 @@ html(lang="en")
                         .col-sm-6
                             .card
                                 .card-body
-                                    h5.card-title Special title treatment
-                                    p.card-text With supporting text below as a natural lead-in to additional content.
-                                    a.btn.btn-primary(href='#') Go somewhere
+                                    h5.card-title best head award
+                                    p.card-text SPE student chapter | july 2019
+                                    ul
+                                        li awarded from all chapter members for completing my mission of creating the web site and create the committee of IT
                         .col-sm-6
                             .card
                                 .card-body
-                                    h5.card-title Special title treatment
-                                    p.card-text With supporting text below as a natural lead-in to additional content.
-                                    a.btn.btn-primary(href='#') Go somewhere
+                                    h5.card-title best technical trainer award
+                                    p.card-text SPE student chapter | May 2020
+                                    ul
+                                        li awarded from all chapter members for To prepare committee members to understand programming, website development and design
             .educations
                 .section-header education
                 .container
@@ -301,15 +309,33 @@ html(lang="en")
                         .col-sm-6
                             .card
                                 .card-body
-                                    h5.card-title Special title treatment
-                                    p.card-text With supporting text below as a natural lead-in to additional content.
-                                    a.btn.btn-primary(href='#') Go somewhere
+                                    h5.card-title High School certificate
+                                    p.card-text suez el-salam school 92%
                         .col-sm-6
                             .card
                                 .card-body
-                                    h5.card-title Special title treatment
-                                    p.card-text With supporting text below as a natural lead-in to additional content.
-                                    a.btn.btn-primary(href='#') Go somewhere
+                                    h5.card-title Bachelor of Computer Science
+                                    p.card-text suez university faculty of computers and information
+                                    ul
+                                        li Grade Good
+            .contacts
+                .section-header contact
+                .container(style="padding: 25px")
+                    p
+                        a(href="mailto:abdelrahmanawzy98@gmail.com" class="icon")
+                            i.fas.fa-envelope
+                        a(href="mailto:abdelrahmanawzy98@gmail.com" style="color:#009688") abdelrahmanawzy98@gmail.com
+                    p
+                        a(href="https://github.com/Abdelrahman-Fawzy" class="icon")
+                            i.fab.fa-github
+                        a(href="https://github.com/Abdelrahman-Fawzy" style="color:#009688") github.com/Abdelrahman-Fawzy
+                    p
+                        a(href="https://www.linkedin.com/in/abdelrahman-mohamed-fawzy-975949183/" class="icon")
+                            i.fab.fa-linkedin-in
+                        a(href="https://www.linkedin.com/in/abdelrahman-mohamed-fawzy-975949183/" style="color:#009688") linkedin.com/in/abdelrahman-fawzy
+            button.toTop
+                i.fas.fa-long-arrow-alt-up
         script(src="js/jquery-3.5.1.min.js")
         script(src="js/bootstrap.min.js")
+        script(src="js/jquery.nicescroll.min.js")
         script(src="js/main.js") 

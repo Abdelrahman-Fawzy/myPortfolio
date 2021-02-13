@@ -13,6 +13,9 @@ body {
 .clearfix {
   clear: both; }
 
+.active {
+  font-weight: bold; }
+
 aside {
   position: fixed;
   height: 100%;
@@ -63,7 +66,8 @@ aside {
 .content-area {
   float: right;
   width: 100%;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  background-color: #FAFAFA; }
   .content-area .intro {
     background-image: url("../images/IMG-20200308-WA0012.jpg");
     background-size: cover;
@@ -106,21 +110,20 @@ aside {
       .content-area .intro h1 span {
         background-color: #008073;
         padding: 5px; }
-  .content-area .about-us blockquote {
+  .content-area .abouts blockquote {
     margin: 32px 40px;
     color: #795548;
     font-weight: 400;
     padding: 20px;
     border-left: 5px solid #795548; }
-    .content-area .about-us blockquote h2 {
+    .content-area .abouts blockquote h2 {
       font-size: 32px; }
-  .content-area .about-us p {
+  .content-area .abouts p {
     font-size: 25px;
     line-height: 42px;
     color: #333;
     margin: 32px 40px; }
   .content-area .experiences {
-    background-color: #EEE;
     padding-bottom: 60px; }
     .content-area .experiences .card {
       width: 100%;
@@ -221,24 +224,121 @@ aside {
             display: inline-block;
             text-align: center;
             line-height: 50px; }
+  .content-area .skills .card {
+    margin: 50px;
+    box-shadow: -4px 5px 7px #efefef; }
+    .content-area .skills .card .responsive-img {
+      margin: 0 auto;
+      max-height: 100px;
+      padding-bottom: 10px;
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell; }
+    .content-area .skills .card .card-title {
+      font-size: 34px;
+      color: #795548;
+      border-bottom: 1px solid #d4d4d4;
+      padding: 20px 0; }
+    .content-area .skills .card .row {
+      padding: 20px 0; }
+  .content-area .awards .card {
+    margin: 35px 10px; }
+    .content-area .awards .card .card-title {
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #008073; }
+    .content-area .awards .card .card-text {
+      color: #795548;
+      text-transform: capitalize;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .content-area .awards .card ul {
+      padding-left: 20px; }
+      .content-area .awards .card ul li {
+        text-transform: capitalize;
+        color: #333;
+        line-height: 32px; }
+  .content-area .educations .card {
+    margin: 35px 10px; }
+    .content-area .educations .card .card-title {
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #008073; }
+    .content-area .educations .card .card-text {
+      color: #795548;
+      text-transform: capitalize;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .content-area .educations .card ul {
+      padding-left: 20px; }
+      .content-area .educations .card ul li {
+        text-transform: capitalize;
+        color: #333;
+        line-height: 32px; }
+  .content-area .contacts p .icon {
+    font-size: 23px;
+    background-color: #8a5a48;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px; }
+  .content-area .toTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 1px solid #b7b5b5;
+    outline: none;
+    color: #888;
+    display: none; }
 
 /* media query */
 @media (max-width: 575px) {
   .intro h1 {
-    margin-top: 67px;
+    margin-top: 150px;
     font-size: 30px !important; }
-  .about-us blockquote h2 {
+  .abouts blockquote h2 {
     font-size: 23px !important; }
-  .about-us p {
+  .abouts p {
     font-size: 20px !important;
-    line-height: 35px !important; } }
+    line-height: 35px !important; }
+  .skills .card {
+    margin: 50px 10px !important; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .intro h1 {
     margin-top: 67px;
     font-size: 40px !important; }
   .experiences .experience-container {
-    max-width: 700px; } }
+    max-width: 700px; }
+  .skills .container {
+    max-width: 720px; }
+    .skills .container .card {
+      margin: 50px 20px; }
+  .awards .container {
+    max-width: 720px; }
+    .awards .container .card .card-title {
+      font-size: 22px; }
+    .awards .container .card .card-text {
+      font-size: 15px; }
+    .awards .container .card ul li {
+      font-size: 15px;
+      line-height: 25px; }
+  .educations .container {
+    max-width: 720px; }
+    .educations .container .card .card-title {
+      font-size: 22px; }
+    .educations .container .card .card-text {
+      font-size: 15px; }
+    .educations .container .card ul li {
+      font-size: 15px;
+      line-height: 25px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .intro h1 {
@@ -247,6 +347,12 @@ aside {
   .experiences .experience-container {
     max-width: 800px; }
   .projects .container {
+    max-width: 900px; }
+  .skills .container {
+    max-width: 900px; }
+  .awards .container {
+    max-width: 900px; }
+  .educations .container {
     max-width: 900px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
